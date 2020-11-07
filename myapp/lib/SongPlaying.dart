@@ -26,9 +26,18 @@ class SongPlaying extends StatelessWidget {
             children: [
               Text(
                 "Now Playing",
-                style: TextStyle(),
+                style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.black38,
+                    fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.left,
               ),
-              Text("Lost in Amsterdam"),
+              Text(
+                "Lost in Amsterdam",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           Container(
