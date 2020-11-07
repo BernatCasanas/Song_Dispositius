@@ -7,8 +7,8 @@ class UserPanel extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          _Menu(),
-          _SongList(),
+          Expanded(flex: 4, child: _Menu()),
+          Expanded(flex: 12, child: _SongList()),
         ],
       ),
     );
@@ -18,11 +18,8 @@ class UserPanel extends StatelessWidget {
 class _SongList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 12,
-      child: Container(
-        color: Color.fromRGBO(36, 36, 36, 1),
-      ),
+    return Container(
+      color: Color.fromRGBO(36, 36, 36, 1),
     );
   }
 }
@@ -30,11 +27,8 @@ class _SongList extends StatelessWidget {
 class _Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 4,
-      child: Container(
-        color: Color.fromRGBO(22, 22, 22, 1),
-      ),
+    return Container(
+      color: Color.fromRGBO(22, 22, 22, 1),
     );
   }
 }
