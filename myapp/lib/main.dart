@@ -39,7 +39,7 @@ class MainPage extends StatelessWidget {
         children: [
           UserPanel(),
           Align(
-            alignment: Alignment.bottomRight,
+            alignment: Alignment.bottomCenter,
             child: SongPlaying(),
           ),
         ],

@@ -7,7 +7,7 @@ class SongPlaying extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 140,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(60),
@@ -22,26 +22,38 @@ class SongPlaying extends StatelessWidget {
             height: 50,
             color: Colors.black,
           ),
-          SizedBox(width: 5),
+          SizedBox(width: 16),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Now Playing",
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black38,
-                    fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.left,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  width: 140,
+                  child: Text(
+                    "Now Playing",
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black38,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
-              Text(
-                "Lost in Amsterdam",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  width: 140,
+                  child: Text(
+                    "Lost in Amsterdam",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ],
           ),
+          SizedBox(width: 70),
           Container(
             width: 30,
             height: 30,
