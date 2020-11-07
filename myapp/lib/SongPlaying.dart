@@ -15,6 +15,7 @@ class SongPlaying extends StatelessWidget {
         color: Color.fromRGBO(132, 218, 165, 1),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 50,
@@ -23,6 +24,7 @@ class SongPlaying extends StatelessWidget {
           ),
           SizedBox(width: 5),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "Now Playing",
