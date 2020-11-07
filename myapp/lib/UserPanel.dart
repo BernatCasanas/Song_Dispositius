@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +21,8 @@ class UserPanel extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Expanded(flex: 4, child: _Menu()),
-          Expanded(flex: 12, child: _SongList()),
+          Expanded(flex: 1, child: _Menu()),
+          Expanded(flex: 3, child: _SongList()),
         ],
       ),
     );
@@ -218,8 +220,152 @@ class _Download extends StatelessWidget {
 class _Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromRGBO(22, 22, 22, 1),
+    return Stack(
+      // clipBehavior: Clip.,
+      children: [
+        Container(
+          color: Color.fromRGBO(22, 22, 22, 1),
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 80),
+              Transform.rotate(
+                angle: -pi / 2,
+                child: Text(
+                  "Albums",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+              ),
+              Transform.rotate(
+                angle: -pi / 2,
+                child: Text(
+                  "·",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+              ),
+              Transform.rotate(
+                angle: -pi / 2,
+                child: Text(
+                  "Playlists ",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+              ),
+              Transform.rotate(
+                angle: -pi / 2,
+                child: Text(
+                  "·",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+              ),
+              Transform.rotate(
+                angle: -pi / 2,
+                child: Text(
+                  "Songs",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(132, 218, 165, 1),
+                  ),
+                ),
+              ),
+              SizedBox(height: 240),
+            ],
+          ),
+        ),
+        Positioned(
+          bottom: 299,
+          right: -183,
+          child: Transform.rotate(
+            angle: pi/7 ,
+            child: Container(
+              width: 180,
+              height: 180,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(36, 36, 36, 1),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(30),
+                  bottom: Radius.circular(30),
+                ),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 254,
+          right: -165,
+          child: Transform.rotate(
+            angle: -pi / 4.3,
+            child: Container(
+              width: 180,
+              height: 180,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(36, 36, 36, 1),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(80),
+                  bottom: Radius.circular(80),
+                ),
+              ),
+            ),
+          ),
+        ),
+         Positioned(
+          bottom: 205,
+          right: -183,
+          child: Transform.rotate(
+            angle: -pi/8 ,
+            child: Container(
+              width: 180,
+              height: 180,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(36, 36, 36, 1),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(30),
+                  bottom: Radius.circular(30),
+                ),
+              ),
+            ),
+          ),
+        ),
+         Positioned(
+          bottom: 337,
+          right: 0,
+          child: Transform.rotate(
+            angle: -pi / 4.3,
+            child: Container(
+              width: 10,
+              height: 10,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(108, 165, 117, 1),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(80),
+                  bottom: Radius.circular(80),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
+
