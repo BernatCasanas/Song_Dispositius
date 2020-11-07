@@ -94,7 +94,6 @@ Widget CreateListSong(Song item) {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          
           Container(
             child: Row(
               children: [
