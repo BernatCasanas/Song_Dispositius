@@ -5,6 +5,7 @@ class SongPlaying extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height:200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(60),
