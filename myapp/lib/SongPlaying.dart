@@ -53,12 +53,13 @@ class SongPlaying extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(width: 70),
+          SizedBox(width: 55),
           Container(
-            width: 30,
-            height: 30,
+            width: 35,
+            height: 35,
             color: Colors.black,
           ),
+          SizedBox(width: 10),
         ],
       ),
     );
