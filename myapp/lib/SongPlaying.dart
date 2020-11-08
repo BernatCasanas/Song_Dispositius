@@ -17,11 +17,11 @@ class SongPlaying extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 50,
-            height: 50,
-            color: Colors.black,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10.0),
+            child: Image.asset("album.jpg", width: 65, height: 65),
           ),
+
           SizedBox(width: 16),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -53,12 +53,19 @@ class SongPlaying extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(width: 55),
-          Container(
-            width: 35,
-            height: 35,
-            color: Colors.black,
-          ),
+           FlatButton(
+                onPressed: () {},
+                child: IconButton(
+                  alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.zero,
+                      constraints: BoxConstraints(),
+                      icon: Icon( Icons.pause_circle_outline_sharp,),
+                      color: Colors.grey[900],
+                      iconSize: 45,
+                      onPressed: () {},
+                  
+                ),
+              ),
           SizedBox(width: 10),
         ],
       ),

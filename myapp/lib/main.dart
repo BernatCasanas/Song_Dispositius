@@ -37,7 +37,6 @@ class MainPage extends StatelessWidget {
 }
 
 class _UpsideBar extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -50,9 +49,16 @@ class _UpsideBar extends StatelessWidget {
             children: [
               Transform.scale(
                 scale: 0.8,
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.grey[700],
+                child: FlatButton(
+                  onPressed: () {},
+                  child: IconButton(
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.zero,
+                    constraints: BoxConstraints(),
+                    icon: Icon(Icons.arrow_back_ios),
+                    color: Colors.grey[600],
+                    onPressed: () {},
+                  ),
                 ),
               ),
               SizedBox(width: 40),
@@ -64,9 +70,16 @@ class _UpsideBar extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 40),
-              Icon(
-                Icons.more_horiz,
-                color: Colors.grey[300],
+              FlatButton(
+                onPressed: () {},
+                child: IconButton(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.zero,
+                  constraints: BoxConstraints(),
+                  icon: Icon(Icons.more_horiz),
+                  color: Colors.grey[300],
+                  onPressed: () {},
+                ),
               ),
             ],
           ),
