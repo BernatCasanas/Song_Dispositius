@@ -77,7 +77,7 @@ class _SongList extends StatelessWidget {
         color: Color.fromRGBO(36, 36, 36, 1),
       ),
       Padding(
-        padding: EdgeInsets.only(left: 30, right: 20, top: 95),
+        padding: EdgeInsets.only(left: 15, right: 10, top: 95),
         child: Column(
           children: [
             _Download(download: download),
@@ -94,7 +94,7 @@ Widget CreateListSong(Song item) {
   return Column(
     children: [
       FlatButton(
-        onPressed: () {},
+        onPressed: () {  },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -116,7 +116,7 @@ Widget CreateListSong(Song item) {
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Container(
-                          width: 155,
+                          width: 160,
                           child: Text(
                             item.name,
                             style: TextStyle(
@@ -132,7 +132,7 @@ Widget CreateListSong(Song item) {
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Container(
-                          width: 155,
+                          width: 160,
                           child: Row(
                             children: [
                               Text(
@@ -239,15 +239,12 @@ class _Menu extends StatelessWidget {
               SizedBox(height: 80),
               Transform.rotate(
                 angle: -pi / 2,
-                child: FlatButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Albums",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[800],
-                    ),
+                child: Text(
+                  "Albums",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
                   ),
                 ),
               ),
@@ -264,15 +261,12 @@ class _Menu extends StatelessWidget {
               ),
               Transform.rotate(
                 angle: -pi / 2,
-                child: FlatButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Playlists ",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[800],
-                    ),
+                child: Text(
+                  "Playlists ",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
                   ),
                 ),
               ),
@@ -289,15 +283,12 @@ class _Menu extends StatelessWidget {
               ),
               Transform.rotate(
                 angle: -pi / 2,
-                child: FlatButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Songs",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(132, 218, 165, 1),
-                    ),
+                child: Text(
+                  "Songs",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(132, 218, 165, 1),
                   ),
                 ),
               ),
