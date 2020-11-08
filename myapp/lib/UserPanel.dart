@@ -77,7 +77,7 @@ class _SongList extends StatelessWidget {
         color: Color.fromRGBO(36, 36, 36, 1),
       ),
       Padding(
-        padding: EdgeInsets.only(left: 30, right: 20, top:95),
+        padding: EdgeInsets.only(left: 30, right: 20, top: 95),
         child: Column(
           children: [
             _Download(download: download),
@@ -93,90 +93,94 @@ class _SongList extends StatelessWidget {
 Widget CreateListSong(Song item) {
   return Column(
     children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            child: Row(
-              children: [
-                if (item.playing) IconButton(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.zero,
-                  constraints: BoxConstraints(),
-                  icon: Icon(Icons.volume_up),
-                  color: Color.fromRGBO(132, 218, 165, 1),
-                  onPressed: () {},
-                ),
-                if(item.playing) SizedBox(width:12),
-                Column(
-                  children: [
-                    Align(
+      FlatButton(
+        onPressed: () {},
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  if (item.playing)
+                    IconButton(
                       alignment: Alignment.centerLeft,
-                      child: Container(
-                        width: 155,
-                        child: Text(
-                          item.name,
-                          style: TextStyle(
-                            color: item.playing
-                                ? Color.fromRGBO(132, 218, 165, 1)
-                                : Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 13,
+                      padding: EdgeInsets.zero,
+                      constraints: BoxConstraints(),
+                      icon: Icon(Icons.volume_up),
+                      color: Color.fromRGBO(132, 218, 165, 1),
+                      onPressed: () {},
+                    ),
+                  if (item.playing) SizedBox(width: 12),
+                  Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          width: 155,
+                          child: Text(
+                            item.name,
+                            style: TextStyle(
+                              color: item.playing
+                                  ? Color.fromRGBO(132, 218, 165, 1)
+                                  : Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Container(
-                        width: 155,
-                        child: Row(
-                          children: [
-                            Text(
-                              item.author,
-                              style: TextStyle(
-                                color: item.playing
-                                    ? Color.fromRGBO(132, 218, 165, 0.6)
-                                    : Colors.grey[500],
-                                fontSize: 10,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          width: 155,
+                          child: Row(
+                            children: [
+                              Text(
+                                item.author,
+                                style: TextStyle(
+                                  color: item.playing
+                                      ? Color.fromRGBO(132, 218, 165, 0.6)
+                                      : Colors.grey[500],
+                                  fontSize: 10,
+                                ),
                               ),
-                            ),
-                            Text(
-                              " · ",
-                              style: TextStyle(
-                                color: item.playing
-                                    ? Color.fromRGBO(132, 218, 165, 0.6)
-                                    : Colors.grey[500],
-                                fontWeight: FontWeight.bold,
+                              Text(
+                                " · ",
+                                style: TextStyle(
+                                  color: item.playing
+                                      ? Color.fromRGBO(132, 218, 165, 0.6)
+                                      : Colors.grey[500],
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              item.album,
-                              style: TextStyle(
-                                color: item.playing
-                                    ? Color.fromRGBO(132, 218, 165, 0.6)
-                                    : Colors.grey[500],
-                                fontSize: 10,
+                              Text(
+                                item.album,
+                                style: TextStyle(
+                                  color: item.playing
+                                      ? Color.fromRGBO(132, 218, 165, 0.6)
+                                      : Colors.grey[500],
+                                  fontSize: 10,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Transform.scale(
-            scale: 0.7,
-            child: IconButton(
-              icon: Icon(Icons.more_horiz),
-              color: Colors.grey[700],
-              onPressed: () {},
+            Transform.scale(
+              scale: 0.7,
+              child: IconButton(
+                icon: Icon(Icons.more_horiz),
+                color: Colors.grey[700],
+                onPressed: () {},
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       SizedBox(height: 35)
     ],
@@ -235,12 +239,15 @@ class _Menu extends StatelessWidget {
               SizedBox(height: 80),
               Transform.rotate(
                 angle: -pi / 2,
-                child: Text(
-                  "Albums",
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[800],
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Albums",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800],
+                    ),
                   ),
                 ),
               ),
@@ -257,12 +264,15 @@ class _Menu extends StatelessWidget {
               ),
               Transform.rotate(
                 angle: -pi / 2,
-                child: Text(
-                  "Playlists ",
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[800],
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Playlists ",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800],
+                    ),
                   ),
                 ),
               ),
@@ -279,12 +289,15 @@ class _Menu extends StatelessWidget {
               ),
               Transform.rotate(
                 angle: -pi / 2,
-                child: Text(
-                  "Songs",
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(132, 218, 165, 1),
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Songs",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(132, 218, 165, 1),
+                    ),
                   ),
                 ),
               ),
@@ -296,7 +309,7 @@ class _Menu extends StatelessWidget {
           bottom: 299,
           right: -183,
           child: Transform.rotate(
-            angle: pi/7 ,
+            angle: pi / 7,
             child: Container(
               width: 180,
               height: 180,
@@ -328,11 +341,11 @@ class _Menu extends StatelessWidget {
             ),
           ),
         ),
-         Positioned(
+        Positioned(
           bottom: 205,
           right: -183,
           child: Transform.rotate(
-            angle: -pi/8 ,
+            angle: -pi / 8,
             child: Container(
               width: 180,
               height: 180,
@@ -346,7 +359,7 @@ class _Menu extends StatelessWidget {
             ),
           ),
         ),
-         Positioned(
+        Positioned(
           bottom: 337,
           right: 0,
           child: Transform.rotate(
@@ -368,4 +381,3 @@ class _Menu extends StatelessWidget {
     );
   }
 }
-
